@@ -1,0 +1,41 @@
+# =========================================================
+# KONFIGURACJA - edytuj ten plik, żeby zmienić parametry wyszukiwania.
+# Po zapisaniu zmian program użyje ich przy następnym uruchomieniu
+# (automatycznym wg harmonogramu, albo ręcznym z zakładki Actions).
+# =========================================================
+
+# Waluta, w której mają być pokazywane ceny (pln, usd, eur, ...)
+currency: "pln"
+
+# Lotniska wylotu (kody IATA)
+departure_airports:
+  - RZE
+  - KRK
+
+# Lista kierunków (kody IATA miast/lotnisk docelowych).
+# Zostaw PUSTĄ listę [], żeby program sam sprawdzał szeroką listę
+# popularnych kierunków z każdego lotniska wylotu.
+destinations: []
+
+# Widełki dat wylotu (format RRRR-MM-DD)
+date_from: "2026-10-01"
+date_to: "2026-12-31"
+
+# Długość pobytu w dniach (min i max)
+stay_min_days: 5
+stay_max_days: 10
+
+# Czy szukać lotów w obie strony (true) czy w jedną (false)
+round_trip: true
+
+# Maksymalna liczba przesiadek dopuszczalna w wyniku (0 = tylko bezpośrednie,
+# ustaw wyżej np. 2, jeśli chcesz też przesiadkowe)
+max_changes: 2
+
+# Ile ofert pobierać na jedno lotnisko wylotu z API (im więcej, tym szersze
+# rozeznanie, ale dłuższe wykonywanie się skryptu)
+results_limit: 1000
+
+# Próg minimalnej liczby obserwacji trasy, zanim program zacznie oznaczać
+# okazje (żeby pierwsza zaobserwowana cena nie była automatycznie "rekordem")
+min_samples_before_deal_alert: 2
